@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  dev:
+    build:
+      context: .
+    command:
+      - npm
+      - start
+    volumes:
+      - .:/work
+    working_dir: /work
+    environment:
+      MYVARIABLE: jigger
+    ports:
+      - "3000:3000"
